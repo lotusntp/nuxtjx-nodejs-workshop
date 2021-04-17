@@ -6,8 +6,8 @@
         USERS
       </h1>
       <ul class="users">
-        <li v-for="(user, index) in users" :key="index" class="user">
-          <nuxt-link :to="{ name: 'users-id', params: { id: index }}">
+        <li v-for="user in users" :key="user.id" class="user">
+          <nuxt-link :to="`/users/${user.id}`">
             {{ user.name }}
           </nuxt-link>
         </li>
@@ -21,16 +21,16 @@
 
 <script>
 export default {
-  async asyncData ({ $http }) {
-    const data = await $http.$get('/api/users')
-    return { users: data }
+  async asyncData({ $http }) {
+    const data = await $http.$get('/api/users');
+    return { users: data };
   },
-  head () {
+  head() {
     return {
       title: 'Users'
-    }
+    };
   }
-}
+};
 </script>
 
 <style scoped>
@@ -42,22 +42,18 @@ export default {
   align-items: center;
   text-align: center;
 }
-.title
-{
+.title {
   margin: 30px 0;
 }
-.users
-{
+.users {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.user
-{
+.user {
   margin: 10px 0;
 }
-.button
-{
+.button {
   display: inline-block;
   margin-top: 50px;
 }

@@ -12,14 +12,20 @@
   },
   "dependencies": {
     "@nuxt/http": "latest",
+    "@nuxtjs/axios": "^5.13.1",
+    "bcrypt": "^5.0.1",
     "express": "latest",
-    "nuxt": "latest"
+    "mongoose": "^5.12.4",
+    "nuxt": "latest",
+    "tailwindcss": "^2.1.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^5.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/tailwindcss": "^4.0.3",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.20.0",
-    "eslint-plugin-nuxt": "^2.0.0"
+    "eslint-plugin-nuxt": "^2.0.0",
+    "postcss": "^8.2.10"
   }
 }
